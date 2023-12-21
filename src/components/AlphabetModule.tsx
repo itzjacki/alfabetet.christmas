@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 
 const AlphabetComponent = () => {
   const alphabet = "abcdefghijklmnopqrstuvwxyzæøå";
-  const [currentLetter, setCurrentLetter] = useState(0);
+  const [currentLetter, setCurrentLetter] = useState(29);
   const [currentInput, setCurrentInput] = useState("");
 
   useEffect(() => {
-    if (currentInput === alphabet[currentLetter]) {
+    if (currentInput.toLowerCase() === alphabet[currentLetter]) {
       setCurrentLetter((prev) => prev + 1);
       setCurrentInput("");
     } else if (currentInput.length >= 1) {
@@ -41,6 +41,7 @@ const AlphabetComponent = () => {
           <div>
             <span>Skriv her: </span>
             <input
+              autoComplete='off'
               type='text'
               className='p-2 rounded w-12'
               value={currentInput}
@@ -51,7 +52,12 @@ const AlphabetComponent = () => {
       ) : (
         <>
           <div>Gratulerer, du har fullført alfabetet!</div>
-          <Image src='goggins.png' alt='You did it man' />
+          <Image
+            src='/goggins.png'
+            alt='You did it man'
+            width={348}
+            height={252}
+          />
           <a
             href='you-did-it'
             className='bg-[#bc4749] text-white py-2 px-4 rounded'

@@ -23,7 +23,7 @@ export default function Home() {
         programmet de brukte ikke hadde den bokstaven i fonten vi valgte. Det
         bør ikke være noe problem når det håndlages uansett.
       </em>
-      <Image src='neon.png' alt='Neonskilt' />
+      <Image src='/neon.png' alt='Neonskilt' width={446} height={140} />
     </>
   );
 }
