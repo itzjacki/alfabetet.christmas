@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const AlphabetComponent = () => {
   const alphabet = "abcdefghijklmnopqrstuvwxyzæøå";
-  const [currentLetter, setCurrentLetter] = useState(29);
+  const [currentLetter, setCurrentLetter] = useState(0);
   const [currentInput, setCurrentInput] = useState("");
 
   useEffect(() => {
