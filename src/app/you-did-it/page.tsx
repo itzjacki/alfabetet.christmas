@@ -1,5 +1,5 @@
-import AlphabetComponent from "@/components/AlphabetModule";
 import Image from "next/image";
+import React from "react";
 
 export default function Home() {
   return (
