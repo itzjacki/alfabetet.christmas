@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const AlphabetComponent = () => {
@@ -13,6 +16,7 @@ const AlphabetComponent = () => {
       setCurrentInput("");
       setCurrentLetter(0);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentInput]);
 
   function getQuestion(letter: number) {
@@ -38,19 +42,19 @@ const AlphabetComponent = () => {
             <span>Skriv her: </span>
             <input
               type='text'
-              class='p-2 rounded w-12'
+              className='p-2 rounded w-12'
               value={currentInput}
-              onchange='handleChange'
+              onChange={handleChange}
             />
           </div>
         </>
       ) : (
         <>
           <div>Gratulerer, du har fullført alfabetet!</div>
-          <img src='goggins.png' alt='You did it man' />
+          <Image src='goggins.png' alt='You did it man' />
           <a
             href='you-did-it'
-            class='bg-[#bc4749] text-white py-2 px-4 rounded'
+            className='bg-[#bc4749] text-white py-2 px-4 rounded'
           >
             Gå til gaven din
           </a>
