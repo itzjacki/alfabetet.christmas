@@ -24,6 +24,10 @@ const AlphabetComponent = () => {
     }
   }
 
+  function handleChange(e: any) {
+    setCurrentInput(e.target.value);
+  }
+
   return (
     <>
       {currentLetter < 29 ? (
@@ -34,9 +38,9 @@ const AlphabetComponent = () => {
             <span>Skriv her: </span>
             <input
               type='text'
-              className='p-2 rounded w-12'
+              class='p-2 rounded w-12'
               value={currentInput}
-              onChange={(e) => setCurrentInput(e.target.value)}
+              onchange='handleChange'
             />
           </div>
         </>
@@ -45,8 +49,8 @@ const AlphabetComponent = () => {
           <div>Gratulerer, du har fullført alfabetet!</div>
           <img src='goggins.png' alt='You did it man' />
           <a
-            className='bg-[#bc4749] text-white py-2 px-4 rounded'
             href='you-did-it'
+            class='bg-[#bc4749] text-white py-2 px-4 rounded'
           >
             Gå til gaven din
           </a>
